@@ -1,0 +1,17 @@
+﻿<div>
+    <div style="background-color: @BackgroundColour"></div>
+    <div style="background-image: url('@_newImageUrl')"></div>
+    <div style="background-image: url('@_oldImageUrl')"></div>
+</div>
+
+@code {
+    public string BackgroundColour { get; set; } = "#FFFFFF";
+    public string InitialUrl { get; set; }
+    public void ChangeImage(string url)
+    {
+        _oldImageUrl = _newImageUrl;
+        _newImageUrl = url;
+    }
+    string _newImageUrl;
+    string _oldImageUrl;
+}

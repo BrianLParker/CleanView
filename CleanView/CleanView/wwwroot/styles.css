@@ -1,11 +1,310 @@
-﻿/*
-    This file is to show how CSS and other static resources (such as images) can be
-    used from a library project/package.
-*/
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-.my-component {
-    border: 2px dashed red;
-    padding: 1em;
-    margin: 1em 0;
-    background-image: url('background.png');
+/*#region Z-INDEX's */
+
+
+.lb-base {
+    z-index: 1;
+}
+
+.clean-view-top {
+    z-index: 10;
+}
+
+.clean-view-content {
+    z-index: 5;
+}
+
+.clean-view-footer {
+    z-index: 6;
+}
+
+.clean-view-pop {
+    z-index: 11;
+}
+
+
+
+/*#endregion */
+
+.lb-base {
+    position: absolute;
+    transition: all 30s ease-in-out;
+}
+
+/* 90 x 160*/
+.lb-pos1 {
+    left: 0;
+    top: 0;
+}
+
+.lb-pos4 {
+    left: calc(100% - 160px);
+    top: 0;
+}
+
+.lb-pos3 {
+    left: 0;
+    top: calc(100% - 90px);
+}
+
+.lb-pos2 {
+    left: calc(100% - 160px);
+    top: calc(100% - 90px);
+}
+
+
+body html {
+    overflow: hidden;
+}
+
+
+.bg-white-95 {
+    background-color: rgba(255,255,255,0.95)
+}
+
+.bg-white-50 {
+    background-color: rgba(255,255,255,0.5)
+}
+
+.bg-black-02 {
+    background-color: rgba(0,0,0,0.2)
+}
+
+.clean-view-shadow {
+    -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.clean-view-shadow-inset {
+    -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.2) inset;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.2) inset;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2) inset;
+}
+
+.clean-view-text-shadow {
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.clean-view-base {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.clean-view-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.26s ease-in-out;
+}
+
+
+.clean-view-content-size {
+    margin: 0px 0px;
+    padding: 15px 40px;
+    transition: all 0.26s ease-in-out;
+}
+
+.clean-view-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.clean-view-pop {
+    position: absolute;
+}
+
+.clean-view-left {
+    transform-origin: left top;
+    animation: 0.26s ease-in-out 0s 1 slideInFromLeft;
+    transition: all 0.26s ease-in-out;
+}
+
+.clean-view-right {
+    transform-origin: right top;
+    animation: 0.26s ease-in-out 0s 1 slideInFromRight;
+    transition: all 0.26s ease-in-out;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        transform: scale(0);
+    }
+
+    100% {
+        transform: translate(0);
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        transform: scale(0);
+    }
+
+    100% {
+        transform: translate(0);
+        transform: scale(1);
+    }
+}
+
+.clean-view-transparent {
+    background-color: transparent;
+    color: white;
+}
+
+/*small*/
+@media (max-width: 767.98px) {
+
+    .clean-view-left {
+        left: 40px;
+        margin-top: 50px;
+    }
+
+    .clean-view-right {
+        right: 40px;
+        margin-top: 50px;
+    }
+
+    .clean-view-top {
+        font-size: 90%;
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+        padding: 20px 40px;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .clean-view-content {
+        border-radius: unset;
+    }
+
+    .clean-view-content-size {
+        margin: 0px 0px;
+        padding: 15px 40px;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .clean-view-white {
+        background-color: white;
+    }
+
+    .clean-view-large {
+        visibility: collapse;
+    }
+
+    .clean-view-small {
+        visibility: visible;
+    }
+}
+/*large*/
+@media (min-width: 768px) {
+
+    .clean-view-left {
+        left: 120px;
+        margin-left: 10px;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .clean-view-right {
+        right: 120px;
+        margin-right: 10px;
+        transition: all 0.26s ease-in-out;
+    }
+
+
+    .clean-view-top {
+        padding: 40px 80px;
+        transform: scaleY(1);
+        /*  transform-origin: top;
+        transition: transform 0.26s ease;*/
+        transition: all 0.26s ease-in-out;
+    }
+
+    .clean-view-content-size {
+        padding: 40px 80px;
+        margin: 0px 80px 40px 80px;
+    }
+
+    .clean-view-content {
+        border-radius: 5px;
+    }
+
+    .clean-view-white {
+        background-color: rgba(255,255,255,0.97);
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    }
+
+    .clean-view-large {
+        visibility: visible;
+    }
+
+    .clean-view-small {
+        visibility: collapse;
+    }
+}
+
+.clean-view-content {
+    flex-grow: 1;
+    display: initial;
+    transition: max-height 0.25s ease-in;
+}
+
+.clean-view-footer {
+    text-align: center;
+    background-color: #012E4D;
+    color: white;
+    font-size: 60%;
+    font-style: oblique;
+}
+
+.clean-view-pointer {
+    cursor: pointer;
+}
+
+.no-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+.fade-up-button:hover {
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px rgba(255,255,255,0.7);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.fade-up-button-open {
+    background-color: rgba(255,255,255,0.4);
+    border: solid 1px rgb(255,255,255);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2) !important;
+}
+.pic-hover:hover {
+    position: relative;
+    z-index: 2;
+    transform: scale(1.5);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    transition: all 0.26s ease-in-out;
+}
+
+.pic-hover {
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
 }

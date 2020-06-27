@@ -1,0 +1,52 @@
+﻿<div class="no-select no-print lb-base @_class">
+    <img height="90" src="_content/CleanView/image/dedication/butterfly.gif" />
+</div>
+
+@code {
+    System.Timers.Timer _timer;
+
+    int _i = new Random().Next(0, 4);
+
+    string _class => _i switch
+    {
+        0 => "lb-pos1",
+        1 => "lb-pos2",
+        2 => "lb-pos3",
+        _ => "lb-pos4"
+    };
+
+    protected override void OnInitialized()
+    {
+        _timer = new System.Timers.Timer();
+        _timer.AutoReset = false;
+        _timer.Elapsed += _timer_Elapsed;
+        ResetTimer();
+
+        base.OnInitialized();
+    }
+
+    void ResetTimer()
+    {
+        var r = new Random();
+        var duration = 5 + r.Next(0, 10);
+
+        _timer.Stop();
+        _timer.Interval = duration * 1000;
+
+        _timer.Start();
+    }
+
+
+    private void _timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+    {
+        InvokeAsync(() =>
+        {
+            _i = (_i + 1) % 4;
+            StateHasChanged();
+
+        });
+        ResetTimer();
+
+    }
+
+}

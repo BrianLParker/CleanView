@@ -1,0 +1,35 @@
+﻿<CascadingValue Value="this" Name="CleanLayout">
+    <div class="clean-view-base" style=@($"background-image: url('{BackgroundImageUrl}');")>
+        @for (int i = 0; i < ((_count > 0) ? _count : 0); i++){ <Larnie /> }
+        <div class="clean-view-top">
+            <div class="clean-view-icons">
+                <button class="btn btn-outline text-white clean-view-text-shadow no-print fade-up-button @_leftButtonStateClass" @onfocusout="OnFocusOut" @onclick="OnClickLeft">
+                    @LeftIcon
+                </button>
+                @if (_openLeft)
+                {
+                <div class="clean-view-pop clean-view-left" @onmouseover="OnMouseOverPanel" @onmouseout="OnMouseOutPanel">
+                    @LeftMenuPanel
+                </div>
+                }
+            </div>
+            <div class="clean-view-icons clean-view-text-shadow">
+            @if (_openRight)
+            {
+                <div class="clean-view-pop clean-view-right" @onmouseover="OnMouseOverPanel" @onmouseout="OnMouseOutPanel">
+                    @RightMenuPanel
+                </div>
+            }
+                <button class="btn btn-outline text-white clean-view-text-shadow no-print fade-up-button @_rightButtonStateClass" @onfocusout="OnFocusOut" @onclick="OnClickRight">
+                    @RightIcon
+                </button>
+            </div>
+        </div>
+        <div class="clean-view-content clean-view-content-size">
+            @Content
+        </div>
+        <div class="clean-view-footer">
+            @_copyright
+        </div>
+    </div>
+</CascadingValue>

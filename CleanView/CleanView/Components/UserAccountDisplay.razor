@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Components.Routing
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+<AuthorizeView Context="IPrinciple">
+    <Authorizing>
+        <em class="text-white">Authenticating...</em>
+    </Authorizing>
+    <Authorized>
+        <NavLink class="nav-link text-black" href="authentication/profile">
+            <span class="oi oi-person" aria-hidden="true"></span> Hello, @ShortName(IPrinciple.User.Identity.Name)!
+        </NavLink>
+        <NavLink class="nav-link text-black clean-view-pointer" @onclick="BeginSignOut" >
+            <span class="oi oi-account-logout" aria-hidden="true"></span> Log out
+        </NavLink>
+    </Authorized>
+    <NotAuthorized>
+        <NavLink class="nav-link text-black" href="authentication/register" >
+            <span class="oi oi-key" aria-hidden="true"></span> Register
+        </NavLink>
+        <NavLink class="nav-link text-black" href="authentication/login" >
+            <span class="oi oi-account-login" aria-hidden="true"></span> Log in
+        </NavLink>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code{
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
+    }
+
+    string ShortName(string email) => email.Split('@').FirstOrDefault() ?? string.Empty;
+}
