@@ -1,16 +1,41 @@
 ﻿@inherits LayoutComponentBase
+<CleanLayout CopyrightOwner="Brian Parker">
+    <LeftMenuPanel>
+        <MenuPanel>
+            <TList Items="_leftMenuItems" Context="location">
+                <NavLink class="nav-link text-black" href="@location.href" Match="location.match">
+                    <span class="oi @location.icon" aria-hidden="true"></span><text class="clean-view-large"> @location.display</text>
+                </NavLink>
+            </TList>
+        </MenuPanel>
+    </LeftMenuPanel>
+    <LeftIcon>
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+        <span class="oi oi-grid-three-up text-shadow" aria-hidden="true"></span>
 
-<div class="main">
-    <div class="top-row px-4 auth">
-        <LoginDisplay />
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-    </div>
+    </LeftIcon>
+    <RightIcon>
 
-    <div class="content px-4">
+        <span class="oi oi-cog text-shadow" aria-hidden="true"></span>
+
+    </RightIcon>
+    <RightMenuPanel>
+
+        <UserAccountDisplay />
+
+        <BackgroundPicker height="60" class="m-1 p-0 border-0 pic-hover" />
+
+    </RightMenuPanel>
+    <Content>
+
         @Body
-    </div>
-</div>
+
+    </Content>
+</CleanLayout>
+@code{
+    IReadOnlyList<(string display, string href, string icon, NavLinkMatch match)> _leftMenuItems =>
+        new[] { ("Home","","oi-home",NavLinkMatch.All),
+                ("Test","test","oi-terminal",NavLinkMatch.Prefix),
+                ("Counter","counter","oi-plus",NavLinkMatch.Prefix),
+                ("Fetch data","fetchdata","oi-list-rich",NavLinkMatch.Prefix)};
+}
