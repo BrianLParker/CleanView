@@ -3,12 +3,30 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
+    <Version>1.0.6</Version>
+    <Authors>Brian Parker</Authors>
+    <Product>Clean View</Product>
+    <Description>Clean view is a wrapper for MainLayout for blazor project. As it has customizable components a wrapper allows easier definition than a replacing MainLayout.</Description>
+    <Copyright>Brian Parker</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon-128x128.png</PackageIcon>
+    <RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="3.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="C:\Users\Brian\Pictures\WebsiteIcons\icon-128x128.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

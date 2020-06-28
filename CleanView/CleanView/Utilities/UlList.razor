@@ -1,0 +1,23 @@
+﻿@typeparam TItem
+<ul @attributes="InputAttributes">
+    @foreach (var item in Items)
+    {
+        <li>
+            @ChildContent(item)
+        </li>
+    }
+</ul>
+@code {
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> ChildContent { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> InputAttributes { get; set; }
+
+    IReadOnlyList<(int id, string name)> _users = Enumerable.Range(0, 5)
+        .Select(a => (a, $"Name{a}"))
+        .ToArray();
+}

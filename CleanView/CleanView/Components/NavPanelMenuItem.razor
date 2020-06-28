@@ -1,0 +1,41 @@
+﻿<div class="d-flex flex-row p-1 text-shadow">
+    <a @attributes="InputAttributes" class="btn btn-sm btn-block d-flex flex-row text-left">
+        <div class="mr-3">
+            <span class="oi @Icon" aria-hidden="true"></span>
+        </div>
+    <div class="flex-grow-1">
+        @Name 
+    </div>
+    </a>
+    @if (ChildContent != default)
+            {
+        //make whole line the button
+    <button class="btn btn-sm m-0 p-0 px-2 border-left" @onclick="SetParent">
+        <span class="oi oi-chevron-right" aria-hidden="true"></span>
+    </button>
+
+    }
+</div>
+@code {
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> InputAttributes { get; set; }
+
+    [Parameter]
+    public string Name { get; set; }
+
+    [Parameter]
+    public string Icon { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [CascadingParameter]
+    public NavPanel ParentPanel { get; set; }
+
+    void SetParent()
+    {
+        ParentPanel?.SetContent(ChildContent);
+    }
+
+}

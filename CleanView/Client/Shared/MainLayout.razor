@@ -1,16 +1,35 @@
 ﻿@inherits LayoutComponentBase
+<CleanLayout CopyrightOwner="<Your Name>" CopyrightStart="2019">
+    <LeftMenuPanel>
+        <div class="border rounded m-0 text-dark p-2 bg-white clean clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
+            <NavPanel>
+                <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
+                <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
+                <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata">
+                    <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
+                    <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
 
-<div class="sidebar">
-    <NavMenu />
-</div>
-
-<div class="main">
-    <div class="top-row px-4 auth">
-        <LoginDisplay />
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-    </div>
-
-    <div class="content px-4">
+                </NavPanelMenuItem>
+            </NavPanel>
+        </div>
+    </LeftMenuPanel>
+    <LeftIcon>
+        <span class="oi oi-grid-three-up text-shadow" aria-hidden="true"></span>
+    </LeftIcon>
+    <RightIcon>
+        <span class="oi oi-cog text-shadow" aria-hidden="true"></span>
+    </RightIcon>
+    <RightMenuPanel>
+        <div class="border rounded m-0 text-dark p-2 bg-white clean clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
+            <NavPanel>
+                <UserAccountDisplay />
+                <div style="flex: unset; max-width: 260px">
+                    <BackgroundPicker height="60" class="m-1 p-0 border-0 pic-hover" />
+                </div>
+            </NavPanel>
+        </div>
+    </RightMenuPanel>
+    <Content>
         @Body
-    </div>
-</div>
+    </Content>
+</CleanLayout>

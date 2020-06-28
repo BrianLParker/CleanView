@@ -1,0 +1,17 @@
+﻿@typeparam TItem
+@foreach (var item in Items)
+{
+    <li @attributes="InputAttributes">
+        @ChildContent(item)
+    </li>
+}
+@code {
+    [Parameter]
+    public IReadOnlyList<TItem> Items { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem> ChildContent { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> InputAttributes { get; set; }
+}
