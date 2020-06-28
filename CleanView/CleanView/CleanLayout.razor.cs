@@ -12,10 +12,14 @@
         public string BackgroundImageUrl { get; set; } = $"_content/CleanView/image/background/background{new Random().Next(1, 8)}.jpg";
 
         [Parameter]
+        public RenderFragment HeaderCenter { get; set; }
+
+        [Parameter]
         public RenderFragment LeftIcon { get; set; }
 
         [Parameter]
         public RenderFragment LeftMenuPanel { get; set; }
+
 
         [Parameter]
         public RenderFragment RightIcon { get; set; }

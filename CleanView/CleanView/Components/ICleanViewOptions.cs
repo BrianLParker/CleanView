@@ -9,7 +9,7 @@
     class CleanViewOptions : ICleanViewOptions
     {
         public bool Transparent { get; set; } = true;
-        public string BackgroundUrl { get; set; } = "_content/CleanView/background.jpg";
+        public string BackgroundUrl { get; set; } = "_content/CleanView/image/background/background4.jpg";
 
     }
 }

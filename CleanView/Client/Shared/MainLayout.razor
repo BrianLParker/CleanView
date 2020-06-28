@@ -1,7 +1,12 @@
 ﻿@inherits LayoutComponentBase
 <CleanLayout CopyrightOwner="<Your Name>" CopyrightStart="2019">
+    <HeaderCenter>
+        <h1 class="text-white bg-white-50 flex-grow-1 rounded clean-view-shadow mx-2 p-1">
+            Hello
+        </h1>
+    </HeaderCenter>
     <LeftMenuPanel>
-        <div class="border rounded m-0 text-dark p-2 bg-white clean clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
+        <div class="border rounded m-0 text-dark p-2 bg-white clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
             <NavPanel>
                 <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
                 <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
@@ -20,7 +25,7 @@
         <span class="oi oi-cog text-shadow" aria-hidden="true"></span>
     </RightIcon>
     <RightMenuPanel>
-        <div class="border rounded m-0 text-dark p-2 bg-white clean clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
+        <div class="border rounded m-0 text-dark p-2 bg-white clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
             <NavPanel>
                 <UserAccountDisplay />
                 <div style="flex: unset; max-width: 260px">
