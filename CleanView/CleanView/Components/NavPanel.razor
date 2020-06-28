@@ -1,0 +1,48 @@
+﻿<div class="d-flex flex-column align-content-stretch m-0 p-0">
+    @if (_panelOpen)
+    {
+        <NavPanel>
+        <NavPanelMenuItem Name="" Icon="oi-chevron-left"  @onclick="Toggle"/>
+            @SubPanelFragment
+        </NavPanel>
+    }
+    else
+    {
+        <CascadingValue Value="this">
+            @ChildContent
+        </CascadingValue>
+    }
+    <div>@Name</div>
+</div>
+@code {
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public RenderFragment SubPanelFragment { get; set; } =@:@{ <div>Nothing to see here</div> }
+    ;
+
+        public string Name { get; set; }
+
+        public void SetName(string name)
+        {
+            Name = name;
+            StateHasChanged();
+        }
+
+        public void SetContent(RenderFragment fragment)
+        {
+            SubPanelFragment = fragment;
+            Toggle();
+            StateHasChanged();
+        }
+
+        bool _panelOpen = false;
+
+        void Toggle()
+        {
+            _panelOpen = !_panelOpen;
+        }
+
+}

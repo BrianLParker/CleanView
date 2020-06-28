@@ -1,13 +1,17 @@
 ﻿@inherits LayoutComponentBase
 <CleanLayout CopyrightOwner="Brian Parker">
     <LeftMenuPanel>
-        <MenuPanel>
-            <TList Items="_leftMenuItems" Context="location">
-                <NavLink class="nav-link text-black" href="@location.href" Match="location.match">
-                    <span class="oi @location.icon" aria-hidden="true"></span><text class="clean-view-large"> @location.display</text>
-                </NavLink>
-            </TList>
-        </MenuPanel>
+        <div class="border rounded m-0 text-dark p-2 bg-white" >
+            <NavPanel>
+                <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
+                <NavPanelMenuItem Name="Test" Icon="oi-terminal" href="test" />
+                <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter">
+                    <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
+                    <NavPanelMenuItem Name="Test" Icon="oi-terminal" href="test" />
+                </NavPanelMenuItem>
+                <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata" />
+            </NavPanel>
+        </div>
     </LeftMenuPanel>
     <LeftIcon>
 
@@ -33,9 +37,5 @@
     </Content>
 </CleanLayout>
 @code{
-    IReadOnlyList<(string display, string href, string icon, NavLinkMatch match)> _leftMenuItems =>
-        new[] { ("Home","","oi-home",NavLinkMatch.All),
-                ("Test","test","oi-terminal",NavLinkMatch.Prefix),
-                ("Counter","counter","oi-plus",NavLinkMatch.Prefix),
-                ("Fetch data","fetchdata","oi-list-rich",NavLinkMatch.Prefix)};
+
 }
