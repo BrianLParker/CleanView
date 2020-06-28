@@ -53,6 +53,20 @@
     top: calc(100% - 90px);
 }
 
+.nav-panel-icon {
+    width: 25px;
+}
+
+.hover-lift {
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.hover-lift:hover {
+        text-shadow: none;  
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+        border: 1px solid rgba(0,0,127,0.1);
+        border-radius: 3px;
+    }
 
 body html {
     overflow: hidden;
