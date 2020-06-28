@@ -55,11 +55,11 @@
 
         void OnFocusOut()
         {
-            //if (!_overPanel)
-            //{
-            //    _openLeft = false;
-            //    _openRight = false;
-            //}
+            if (!_overPanel)
+            {
+                _openLeft = false;
+                _openRight = false;
+            }
         }
 
         bool _overPanel = false;

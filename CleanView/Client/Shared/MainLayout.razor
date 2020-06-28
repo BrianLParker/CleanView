@@ -1,41 +1,35 @@
 ﻿@inherits LayoutComponentBase
 <CleanLayout CopyrightOwner="Brian Parker">
     <LeftMenuPanel>
-        <div class="border rounded m-0 text-dark p-2 bg-white" >
+        <div class="border rounded m-0 text-dark p-2 bg-white clean clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
             <NavPanel>
                 <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
-                <NavPanelMenuItem Name="Test" Icon="oi-terminal" href="test" />
-                <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter">
+                <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
+                <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata">
                     <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
-                    <NavPanelMenuItem Name="Test" Icon="oi-terminal" href="test" />
+                    <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
+
                 </NavPanelMenuItem>
-                <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata" />
             </NavPanel>
         </div>
     </LeftMenuPanel>
     <LeftIcon>
-
         <span class="oi oi-grid-three-up text-shadow" aria-hidden="true"></span>
-
     </LeftIcon>
     <RightIcon>
-
         <span class="oi oi-cog text-shadow" aria-hidden="true"></span>
-
     </RightIcon>
     <RightMenuPanel>
-
-        <UserAccountDisplay />
-
-        <BackgroundPicker height="60" class="m-1 p-0 border-0 pic-hover" />
-
+        <div class="border rounded m-0 text-dark p-2 bg-white clean clean-view-shadow clean-view-text-shadow " style="min-width: 260px">
+            <NavPanel>
+                <UserAccountDisplay />
+                <div style="flex: unset; max-width: 260px">
+                    <BackgroundPicker height="60" class="m-1 p-0 border-0 pic-hover" />
+                </div>
+            </NavPanel>
+        </div>
     </RightMenuPanel>
     <Content>
-
         @Body
-
     </Content>
 </CleanLayout>
-@code{
-
-}
