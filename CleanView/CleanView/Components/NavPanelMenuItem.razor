@@ -1,6 +1,6 @@
-﻿<div class="d-flex flex-row p-1 text-shadow">
-    <a @attributes="InputAttributes" class="btn btn-sm btn-block d-flex flex-row text-left clean-view-pointer">
-        <div class="mr-3">
+﻿<div class="d-flex flex-row p-1">
+    <a @attributes="InputAttributes" class="btn btn-sm btn-block d-flex flex-row text-left clean-view-pointer hover-lift">
+        <div class="mr-3 nav-panel-icon">
             <span class="oi @Icon" aria-hidden="true"></span>
         </div>
         <div class="flex-grow-1">
@@ -9,7 +9,7 @@
     </a>
     @if (ChildContent != default)
     {
-        <button class="btn btn-sm m-0 p-0 px-2 border-left" @onclick="SetParent">
+        <button class="btn btn-sm m-0 p-0 px-2 border-left hover-lift" @onclick="SetParent">
             <span class="oi oi-chevron-right" aria-hidden="true"></span>
         </button>
 
