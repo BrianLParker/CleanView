@@ -30,13 +30,24 @@
         public string CopyrightOwner { get; set; } = "Owner";
 
         [Parameter]
+
+
+
+
+        /// <summary>
+        /// Start rear of copyright. If not current year the footer will show a year range.
+        /// </summary>
         public int CopyrightStart { get; set; } = DateTime.Now.Year;
+
+        [Parameter]
+        public int ButterflyCount { get; set; } = 1;
+
 
         string _copyright => $"Copyright © {CopyrightStart}" + (CopyrightStart == DateTime.Now.Year ? "" : $" - {DateTime.Now.Year}") + $", " + CopyrightOwner;
 
         bool _openLeft = false;
         bool _openRight = false;
-        int _count = -3;
+
 
         string _leftButtonStateClass => _openLeft ? "fade-up-button-open" : "";
         string _rightButtonStateClass => _openRight ? "fade-up-button-open" : "";
@@ -79,10 +90,10 @@
             Nav.LocationChanged += Nav_LocationChanged;
             base.OnInitialized();
         }
-
+        int _count = new Random((int)DateTime.Now.Ticks).Next(3, 15) * -1;
         private void Nav_LocationChanged(object sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
         {
-            if (_count < 15)
+            if (_count < ButterflyCount)
             {
                 _count++;
 
@@ -96,8 +107,8 @@
         {
             //InvokeAsync(() =>
             //{
-                BackgroundImageUrl = url;
-                StateHasChanged();
+            BackgroundImageUrl = url;
+            StateHasChanged();
             //});
         }
     }
