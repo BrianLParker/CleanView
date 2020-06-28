@@ -6,12 +6,16 @@
     <Version>1.0.8</Version>
     <Authors>Brian Parker</Authors>
     <Product>Clean View</Product>
-    <Description>Clean view is a wrapper for MainLayout for blazor project. As it has customizable components a wrapper allows easier definition than a replacing MainLayout.</Description>
+    <Description>Clean view is a wrapper for MainLayout for blazor project.</Description>
     <Copyright>Brian Parker</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon-128x128.png</PackageIcon>
     <RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Please see GitHub repo for example of use in Client.
+CleanLayout, NavPanel, NavPanelMenuItem are the primary components. 
+UserAccountDisplay is a drop in replacement for the identity templates LoginDisplay.
+</PackageReleaseNotes>
   </PropertyGroup>
 
 

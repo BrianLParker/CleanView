@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanView.Server", "CleanView\Server\CleanView.Server.csproj", "{F12A9C82-09ED-451A-B746-068F58C9A081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanView.Server", "CleanView\Server\CleanView.Server.csproj", "{F12A9C82-09ED-451A-B746-068F58C9A081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanView.Client", "CleanView\Client\CleanView.Client.csproj", "{E19E2CDB-262D-4451-AC08-4DC6AE22BB42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanView.Client", "CleanView\Client\CleanView.Client.csproj", "{E19E2CDB-262D-4451-AC08-4DC6AE22BB42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanView.Shared", "CleanView\Shared\CleanView.Shared.csproj", "{B84CCA5A-4C6F-42A8-8697-E4BB5548862F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanView.Shared", "CleanView\Shared\CleanView.Shared.csproj", "{B84CCA5A-4C6F-42A8-8697-E4BB5548862F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanView", "CleanView\CleanView\CleanView.csproj", "{9DB4758C-839A-4D1E-85F2-974048D61B99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanView", "CleanView\CleanView\CleanView.csproj", "{9DB4758C-839A-4D1E-85F2-974048D61B99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

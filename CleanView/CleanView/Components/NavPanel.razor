@@ -1,16 +1,20 @@
 ﻿<div class="d-flex flex-column align-content-stretch m-0 p-0 overflow-hidden">
     @if (_panelOpen)
     {
-    <NavPanel>
-        <NavPanelMenuItem Name="" Icon="oi-chevron-left" @onclick="Toggle" />
-        @SubPanelFragment
-    </NavPanel>
+        <div class="clean-view-panel-left">
+            <NavPanel>
+                <NavPanelMenuItem Name="" Icon="oi-chevron-left" @onclick="Toggle" />
+                @SubPanelFragment
+            </NavPanel>
+        </div>
     }
     else
     {
-    <CascadingValue Value="this" >
-        @ChildContent
-    </CascadingValue>
+        <div class="clean-view-panel-right">
+            <CascadingValue Value="this">
+                @ChildContent
+            </CascadingValue>
+        </div>
     }
 </div>
 @code {
