@@ -9,7 +9,7 @@
     <Description>Clean view is a wrapper for MainLayout for blazor project.</Description>
     <Copyright>Brian Parker</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIcon>icon-128x128.png</PackageIcon>
+    <PackageIcon>icon-64x64.png</PackageIcon>
     <RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReleaseNotes>Please see GitHub repo for example of use in Client.
@@ -27,10 +27,15 @@ UserAccountDisplay is a drop in replacement for the identity templates LoginDisp
 
 
   <ItemGroup>
-    <None Include="C:\Users\Brian\Pictures\WebsiteIcons\icon-128x128.png">
+    <None Include="C:\Users\Brian\Pictures\WebsiteIcons\icon-64x64.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\image\background\Originals\" />
   </ItemGroup>
 
 </Project>

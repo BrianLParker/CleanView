@@ -1,8 +1,8 @@
 ﻿@inherits LayoutComponentBase
-<CleanLayout CopyrightOwner="<Your Name>" CopyrightStart="2019">
+<CleanLayout CopyrightOwner="<Your Name>" CopyrightStart="1936">
     <HeaderCenter>
         <h1 class="text-white bg-white-50 flex-grow-1 rounded clean-view-shadow mx-2 p-1">
-            Hello
+            Hello <em class="text-dark" style="font-size:0.4em;">( note: flex-grow-1 used here. )</em>
         </h1>
     </HeaderCenter>
     <LeftMenuPanel>
@@ -10,8 +10,10 @@
             <NavPanel>
                 <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
                 <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
-                <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata">
-                    <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
+                <NavPanelMenuItem Name="Sub Menu" Icon="">
+                    <AuthorizeView>
+                        <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata" />
+                    </AuthorizeView>
                     <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
 
                 </NavPanelMenuItem>
@@ -28,9 +30,9 @@
         <div class="border rounded m-0 text-dark p-2 bg-white clean-view-shadow clean-view-text-shadow " style="min-width: 320px">
             <NavPanel>
                 <UserAccountDisplay />
-                <div class="p-3" style="flex: unset; max-width: 320px">
+                @*<div class="p-3" style="flex: unset; max-width: 320px">
                     <BackgroundPicker height="60" class="m-1 p-0 border-0 pic-hover" />
-                </div>
+                </div>*@
             </NavPanel>
         </div>
     </RightMenuPanel>
