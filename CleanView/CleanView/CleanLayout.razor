@@ -1,5 +1,5 @@
 ﻿<CascadingValue Value="this" Name="CleanLayout">
-    <div class="clean-view-base" style=@($"background-image: url('{BackgroundImageUrl}');")>
+    <div style="@_backgroundStyle" class="clean-view-base @BackgroundClass">
         @for (int i = 0; i < ((_count > 0) ? _count : 0); i++)
         {<Larnie />}
         <div class="clean-view-top">

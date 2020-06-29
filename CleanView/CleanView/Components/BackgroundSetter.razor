@@ -1,12 +1,17 @@
 ﻿@code {
     [Parameter]
-    public string Url { get; set; } = "_content/CleanView/background/background4.jpg";
+    public string Url { get; set; }
+
+    [Parameter]
+    public string CssClass { get; set; } = "app-background-gradient";
 
     [CascadingParameter(Name = "CleanLayout")]
     public CleanLayout CleanLayout { get; set; }
-        protected override void OnInitialized()
+
+    
+    protected override void OnInitialized()
     {
-        CleanLayout.SetBackground(Url);
+        CleanLayout.SetBackground(Url,CssClass);
         base.OnInitialized();
     }
 }

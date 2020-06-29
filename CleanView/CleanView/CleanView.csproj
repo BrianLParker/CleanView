@@ -33,4 +33,9 @@ UserAccountDisplay is a drop in replacement for the identity templates LoginDisp
     </None>
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\image\background\Originals\" />
+  </ItemGroup>
+
 </Project>

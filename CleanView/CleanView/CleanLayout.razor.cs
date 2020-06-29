@@ -9,7 +9,10 @@
         public NavigationManager Nav { get; set; }
 
         [Parameter]
-        public string BackgroundImageUrl { get; set; } = $"_content/CleanView/image/background/background{new Random().Next(1, 8)}.jpg";
+        public string BackgroundImageUrl { get; set; }
+
+        [Parameter]
+        public string BackgroundClass { get; set; } = "app-background-gradient";
 
         [Parameter]
         public RenderFragment HeaderCenter { get; set; }
@@ -34,10 +37,6 @@
         public string CopyrightOwner { get; set; } = "Owner";
 
         [Parameter]
-
-
-
-
         /// <summary>
         /// Start rear of copyright. If not current year the footer will show a year range.
         /// </summary>
@@ -48,6 +47,7 @@
 
 
         string _copyright => $"Copyright © {CopyrightStart}" + (CopyrightStart == DateTime.Now.Year ? "" : $" - {DateTime.Now.Year}") + $", " + CopyrightOwner;
+        string _backgroundStyle => string.IsNullOrWhiteSpace(BackgroundImageUrl) ? "" : $"background-image: url('{BackgroundImageUrl}');";
 
         bool _openLeft = false;
         bool _openRight = false;
@@ -107,13 +107,11 @@
             _openRight = false;
         }
 
-        public void SetBackground(string url)
+        public void SetBackground(string url,string cssClass)
         {
-            //InvokeAsync(() =>
-            //{
+            BackgroundClass = cssClass;
             BackgroundImageUrl = url;
-            StateHasChanged();
-            //});
+          //  StateHasChanged();
         }
     }
 }
