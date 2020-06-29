@@ -6,7 +6,7 @@
     <Version>1.0.10</Version>
     <Authors>Brian Parker</Authors>
     <Product>Clean View</Product>
-    <Description>Clean view is a wrapper for MainLayout for blazor project.</Description>
+    <Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
     <Copyright>Brian Parker</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon-64x64.png</PackageIcon>
