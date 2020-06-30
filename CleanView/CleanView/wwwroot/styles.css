@@ -311,13 +311,17 @@ body html {
 }
 
 .clean-view-footer {
-    text-align: center;
-    background-color: #012E4D;
+    display:flex;
+    flex-flow:row ;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.4);
     color: white;
-    font-size: 60%;
-    font-style: oblique;
+    font-size: 0.75em;
+    padding: 0 2px;
 }
-
+.clean-view-foot-note {
+    color: rgba(255,255,255,0.3);
+}
 .clean-view-pointer {
     cursor: pointer;
 }
@@ -330,6 +334,10 @@ body html {
 
 @media print {
     .no-print {
+        display: none;
+    }
+
+    .clean-view-foot-note {
         display: none;
     }
 }

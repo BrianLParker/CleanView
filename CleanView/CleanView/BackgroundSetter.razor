@@ -3,15 +3,20 @@
     public string Url { get; set; }
 
     [Parameter]
+    public string FootNote { get; set; }
+
+    [Parameter]
     public string CssClass { get; set; } = "app-background-gradient";
 
     [CascadingParameter(Name = "CleanLayout")]
     public CleanLayout CleanLayout { get; set; }
 
-    
+
+
+
     protected override void OnInitialized()
     {
-        CleanLayout.SetBackground(Url,CssClass);
+        CleanLayout.SetBackground(Url,FootNote,CssClass);
         base.OnInitialized();
     }
 }
