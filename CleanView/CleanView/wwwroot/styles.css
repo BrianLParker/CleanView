@@ -113,6 +113,7 @@ body html {
     overflow: hidden;
 }
 
+
 .clean-view-top {
     display: flex;
     flex-direction: row;
@@ -376,6 +377,17 @@ body html {
     -ms-animation: fadeIn ease 0.3s;
 }
 
+
+.fade-out-delay {
+    opacity: 0;
+    animation-name: fadeIn, fadeOut;
+    animation-duration: 0.5s, 0.5s;
+    animation-delay: 0s, 2.5s;
+    animation-timing-function: ease-in, ease-out;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -423,6 +435,57 @@ body html {
 
     100% {
         opacity: 1;
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

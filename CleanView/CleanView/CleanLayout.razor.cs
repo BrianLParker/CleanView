@@ -111,7 +111,7 @@
         {
             BackgroundClass = cssClass;
             BackgroundImageUrl = url;
-          //  StateHasChanged();
+            StateHasChanged();
         }
     }
 }

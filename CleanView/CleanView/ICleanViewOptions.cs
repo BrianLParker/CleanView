@@ -1,4 +1,4 @@
-﻿namespace CleanView.Components
+﻿namespace CleanView
 {
     interface ICleanViewOptions
     {
