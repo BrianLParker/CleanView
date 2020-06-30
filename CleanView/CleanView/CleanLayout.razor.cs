@@ -12,6 +12,9 @@
         public string BackgroundImageUrl { get; set; }
 
         [Parameter]
+        public string FootNote { get; set; }
+
+        [Parameter]
         public string BackgroundClass { get; set; } = "app-background-gradient";
 
         [Parameter]
@@ -107,11 +110,12 @@
             _openRight = false;
         }
 
-        public void SetBackground(string url,string cssClass)
+        public void SetBackground(string url,string footNote,string cssClass)
         {
+            FootNote = footNote;
             BackgroundClass = cssClass;
             BackgroundImageUrl = url;
-          //  StateHasChanged();
+            StateHasChanged();
         }
     }
 }
