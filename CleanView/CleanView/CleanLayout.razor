@@ -1,9 +1,8 @@
 ﻿<CascadingValue Value="this" Name="CleanLayout">
     <div class="clean-view-base @BackgroundClass">
         <div style="@_backgroundStyle" class="clean-view-base">
-            @for (int i = 0; i < ((_count > 0) ? _count : 0); i++)
-            {<Larnie />}
-            <div class="clean-view-top">
+            @for (int i = 0; i < ((_count > 0) ? _count : 0); i++) {<Larnie />}
+            <header class="clean-view-top">
                 <div class="clean-view-icons">
                     <button class="btn btn-outline text-white clean-view-text-shadow no-print fade-up-button @_leftButtonStateClass" @onfocusout="OnFocusOut" @onclick="OnClickLeft">
                         @LeftIcon
@@ -27,18 +26,18 @@
                         @RightIcon
                     </button>
                 </div>
-            </div>
-            <div class="clean-view-content clean-view-content-size">
+            </header>
+            <article class="clean-view-content clean-view-content-size">
                 @Content
-            </div>
-            <div class="clean-view-footer no-select">
+            </article>
+            <footer class="clean-view-footer no-select">
                 <div class="clean-view-foot-note">
                     @FootNote
                 </div>
                 <div>
                     @_copyright
                 </div>
-            </div>
+            </footer>
         </div>
     </div>
 </CascadingValue>
