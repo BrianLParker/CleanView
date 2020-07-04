@@ -1,54 +1,10 @@
 ﻿@inherits LayoutComponentBase
-@inject SignOutSessionStateManager SignOutManager
 <CleanLayout CopyrightOwner="<Your Name>" CopyrightStart="1936">
     <HeaderCenter>
-
-        <div class="text-white flex-grow-1 mx-2 p-1 d-flex flex-row justify-content-between">
-            <div>
-                <AuthorizeView>
-                    <Authorizing>
-                        <em style="font-size:0.6em">Authenticating...</em>
-                    </Authorizing>
-                </AuthorizeView>
-
-            </div>
-
-            <div class="align-self-end">
-                <AuthorizeView>
-                    <Authorizing>
-
-                    </Authorizing>
-                    <NotAuthorized>
-                        <div class="fade-out-delay">
-                            @Greating, click here to login.
-                        </div>
-                    </NotAuthorized>
-                    <Authorized>
-                        <h4 class="fade-out-delay clean-view-text-shadow">
-                            @Greating, @ShortName(context.User.Identity.Name)
-                        </h4>
-                    </Authorized>
-                </AuthorizeView>
-            </div>
-        </div>
-
+        <AppHeader />
     </HeaderCenter>
     <LeftMenuPanel>
-
-        <div class="border rounded m-0 text-dark p-2 bg-white clean-view-shadow clean-view-text-shadow " style="min-width: 320px">
-
-            <NavPanel>
-                <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
-                <NavPanelMenuItem Name="Sub Menu" Icon="">
-                    <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
-                    <AuthorizeView>
-                        <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata" />
-                    </AuthorizeView>
-                </NavPanelMenuItem>
-            </NavPanel>
-
-        </div>
-
+        <NavMenuLeft />
     </LeftMenuPanel>
     <LeftIcon>
         <span class="oi oi-grid-three-up text-shadow" aria-hidden="true"></span>
@@ -57,38 +13,10 @@
         <span class="oi oi-cog text-shadow" aria-hidden="true"></span>
     </RightIcon>
     <RightMenuPanel>
-        <div class="border rounded m-0 text-dark p-2 bg-white clean-view-shadow clean-view-text-shadow " style="min-width: 320px">
-            <NavPanel>
-                <UserAccountDisplay />
-            </NavPanel>
-        </div>
+        <NavMenuRight />
     </RightMenuPanel>
     <Content>
         @Body
     </Content>
 </CleanLayout>
 
-@code {
-
-    string Greating
-    {
-        get
-        {
-
-            var hour = DateTime.Now.Hour;
-            if (hour > 18) return "Good evening";
-            if (hour > 12) return "Good afternoon";
-            if (hour > 10) return "Hello";
-            return "Good morning";
-        }
-    }
-
-
-    string ShortName(string email)
-    {
-        var namepart = email.Split('@').FirstOrDefault() ?? string.Empty;
-        return namepart.Replace(".", " ");
-
-    }
-
-}

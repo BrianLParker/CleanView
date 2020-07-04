@@ -1,0 +1,53 @@
+﻿@inject SignOutSessionStateManager SignOutManager
+<div class="text-white flex-grow-1 mx-2 p-1 d-flex flex-row justify-content-between">
+    <div>
+        <AuthorizeView>
+            <Authorizing>
+                <em style="font-size:0.6em">Authenticating...</em>
+            </Authorizing>
+        </AuthorizeView>
+
+    </div>
+
+    <div class="align-self-end">
+        <AuthorizeView>
+            <Authorizing>
+
+            </Authorizing>
+            <NotAuthorized>
+                <div class="fade-out-delay">
+                    @Greating, click here to login.
+                </div>
+            </NotAuthorized>
+            <Authorized>
+                <h4 class="fade-out-delay clean-view-text-shadow">
+                    @Greating, @ShortName(context.User.Identity.Name)
+                </h4>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+</div>
+@code {
+
+    string Greating
+    {
+        get
+        {
+
+            var hour = DateTime.Now.Hour;
+            if (hour > 18) return "Good evening";
+            if (hour > 12) return "Good afternoon";
+            if (hour > 10) return "Hello";
+            return "Good morning";
+        }
+    }
+
+
+    string ShortName(string email)
+    {
+        var namepart = email.Split('@').FirstOrDefault() ?? string.Empty;
+        return namepart.Replace(".", " ");
+
+    }
+
+}
