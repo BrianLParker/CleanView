@@ -1,10 +1,10 @@
 {
-  "name": "CleanView",
-  "short_name": "CleanView",
+  "name": "Clean View",
+  "short_name": "Clean View",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "theme_color": "#000077",
   "icons": [
     {
       "src": "icon-512.png",

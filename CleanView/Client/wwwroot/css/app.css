@@ -190,3 +190,12 @@ app {
     background: linear-gradient(to bottom, #f0cb35 0%,#c02425 100%,#c02425 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0cb35', endColorstr='#c02425',GradientType=0 ); /* IE6-9 */
 }
+
+.aussie-sunset {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c02425+0,c02425+0,f0cb35+100 */
+    background: #c02425; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #c02425 0%, #c02425 0%, #f0cb35 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #c02425 0%,#c02425 0%,#f0cb35 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #c02425 0%,#c02425 0%,#f0cb35 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c02425', endColorstr='#f0cb35',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
