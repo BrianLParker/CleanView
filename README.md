@@ -27,22 +27,12 @@ Clean view is a wrapper for MainLayout for blazor project. As it has customizabl
 
 ```
 @inherits LayoutComponentBase
-<CleanLayout CopyrightOwner="<Your Name>">
+<CleanLayout CopyrightOwner="<Your Name>" CopyrightStart="1936">
     <HeaderCenter>
+        <AppHeader />
     </HeaderCenter>
-
     <LeftMenuPanel>
-
-        <div class="m-0 text-dark p-2 bg-white">
-
-            <NavPanel>
-                <NavPanelMenuItem Name="Home" Icon="oi-home" href="" />
-                <NavPanelMenuItem Name="Counter" Icon="oi-plus" href="counter" />
-                <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" href="fetchdata" />
-            </NavPanel>
-
-        </div>
-
+        <NavMenuLeft />
     </LeftMenuPanel>
     <LeftIcon>
         <span class="oi oi-grid-three-up text-shadow" aria-hidden="true"></span>
@@ -51,13 +41,7 @@ Clean view is a wrapper for MainLayout for blazor project. As it has customizabl
         <span class="oi oi-cog text-shadow" aria-hidden="true"></span>
     </RightIcon>
     <RightMenuPanel>
-
-        <div class="m-0 text-dark p-2 bg-white">
-            <NavPanel>
-                <LoginDisplay/>
-            </NavPanel>
-        </div>
-
+        <NavMenuRight />
     </RightMenuPanel>
     <Content>
         @Body
@@ -66,9 +50,9 @@ Clean view is a wrapper for MainLayout for blazor project. As it has customizabl
 
 ```
 
-### Note: 
+### NavPanel's 
 - NavPanelMenuItems can contain NavPanelMenuItems allowing for nested menu structure.
-- NavPanelMenuItems can be treated like anchor ```<a />``` elements. Attributes are splattered to the anchor. If css classes are used be aware they will override the default class applied.
+- NavPanelMenuItems can be treated like anchor <a /> elements. Attributes are splattered to the anchor. If css classes are used be aware they will override the default class applied.
 
 
 ```

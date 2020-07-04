@@ -4,9 +4,8 @@
 @using CleanView.Shared
 @attribute [Authorize]
 @inject HttpClient Http
-<BackgroundSetter CssClass="example-background-class" />
+<PageLayout CssClass="example-background-class">
 
-<div class="bg-white p-3 rounded clean-view-shadow fade-in-03">
     <h1>Weather forecast</h1>
 
     <p>This component demonstrates fetching data from the server.</p>
@@ -39,7 +38,8 @@
             </tbody>
         </table>
     }
-</div>
+
+</PageLayout>
 @code {
     private WeatherForecast[] forecasts;
 

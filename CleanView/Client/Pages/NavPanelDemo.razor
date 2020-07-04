@@ -1,0 +1,25 @@
+﻿@page "/navdemo"
+<BackgroundSetter Url="CleanViewBackgroundClear.png" FootNote="Image created with Blender" CssClass="example-background-class" />
+    <div class="d-flex flex-column" >
+        <div class="offset-4 col-4 bg-white rounded shadow-lg">
+            <NavPanel>
+                <NavPanelMenuItem Name="Home" Icon="oi-home" />
+                <NavPanelMenuItem Name="Sub Menu" Icon="">
+                    <NavPanelMenuItem Name="Counter" Icon="oi-plus" />
+                    <NavPanelMenuItem Name="Fetch data" Icon="oi-list-rich" />
+                    <NavPanelMenuItem Name="Sub Menu 1" Icon="">
+                        <NavPanelMenuItem Name="Menu 1 Item 1" Icon="oi-plus" />
+                        <NavPanelMenuItem Name="Menu 1 Item 2" Icon="oi-list-rich" />
+                    </NavPanelMenuItem>
+                    <NavPanelMenuItem Name="Sub Menu 2" Icon="">
+                        <NavPanelMenuItem Name="Menu 2 Item 1" Icon="oi-plus" />
+                        <NavPanelMenuItem Name="Menu 2 Item 2" Icon="oi-list-rich" />
+                    </NavPanelMenuItem>
+                </NavPanelMenuItem>
+            </NavPanel>
+        </div>
+    </div>
+
+@code {
+
+}
