@@ -1,12 +1,15 @@
 ﻿@page "/counter"
-    <PageLayout Url="background.jpg" FootNote="Far north coast NSW, looking towards Gold Coast QLD. Australia">
 
-            <h1>Counter</h1>
+<PageLayout Url="CleanViewBackgroundClear.png" FootNote="" CssClass="app-background-gradient">
 
-            <p>Current count: @currentCount</p>
+    <h1>Counter</h1>
 
-            <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-    </PageLayout>
+    <p>Current count: @currentCount</p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+</PageLayout>
+
 @code {
     private int currentCount = 0;
 

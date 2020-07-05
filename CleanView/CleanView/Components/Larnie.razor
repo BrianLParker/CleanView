@@ -1,11 +1,18 @@
-﻿<div class="no-select no-print lb-base @_class">
-    <img height="90" src="_content/CleanView/image/dedication/butterfly.gif" />
+﻿@*
+  This component is a dedication to my wife Larnie, 22nd June 1968 - 20th March 2020.
+  Crohn's Disease is a horrible condition. Larnie passed away alone because of COVID-19
+  restrictions. 🌺🌸 
+*@
+
+<div class="no-select no-print lb-base @_class">
+    <img style="filter: hue-rotate(@(angle)deg)" height="90" src="_content/CleanView/image/dedication/butterfly.gif" />
 </div>
 
 @code {
     System.Timers.Timer _timer;
 
     int _i = new Random().Next(0, 4);
+    int angle = new Random().Next(0, 360);
 
     string _class => _i switch
     {

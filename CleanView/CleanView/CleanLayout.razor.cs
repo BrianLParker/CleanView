@@ -39,14 +39,11 @@
         [Parameter]
         public string CopyrightOwner { get; set; } = "Owner";
 
-        [Parameter]
-        /// <summary>
-        /// Start rear of copyright. If not current year the footer will show a year range.
-        /// </summary>
+        [Parameter]       
         public int CopyrightStart { get; set; } = DateTime.Now.Year;
 
         [Parameter]
-        public int ButterflyCount { get; set; } = 1;
+        public int ButterflyCount { get; set; } = (DateTime.Today.Month == 6 && DateTime.Today.Day == 22) ? 1 : 0;
 
 
         string _copyright => $"Copyright © {CopyrightStart}" + (CopyrightStart == DateTime.Now.Year ? "" : $" - {DateTime.Now.Year}") + $", " + CopyrightOwner;
