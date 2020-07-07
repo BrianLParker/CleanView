@@ -28,7 +28,7 @@
             <tbody>
                 @foreach (var forecast in forecasts)
                 {
-                    <tr>
+                    <tr @key="@forecast">
                         <td>@forecast.Date.ToShortDateString()</td>
                         <td>@forecast.TemperatureC</td>
                         <td>@forecast.TemperatureF</td>
