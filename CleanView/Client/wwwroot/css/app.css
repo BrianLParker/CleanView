@@ -1,8 +1,9 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Lato', sans-serif;
-}
+/*    font-family: 'Lato', sans-serif;
+    text-rendering: optimizeLegibility;
+*/}
 
 a, .btn-link {
     color: #0366d6;

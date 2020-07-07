@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
-    <Version>1.0.15</Version>
+    <Version>1.0.16</Version>
     <Authors>Brian Parker</Authors>
     <Product>Clean View</Product>
     <Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
