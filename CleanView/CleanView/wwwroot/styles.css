@@ -30,9 +30,6 @@
     position: absolute;
     transition: all 30s ease-in-out;
 }
-.lb-colour {
-    filter: hue-rotate(165deg);
-}
 /* 90 x 160*/
 .lb-pos1 {
     left: 0;
