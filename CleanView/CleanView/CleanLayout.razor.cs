@@ -39,7 +39,7 @@
         [Parameter]
         public string CopyrightOwner { get; set; } = "Owner";
 
-        [Parameter]       
+        [Parameter]
         public int CopyrightStart { get; set; } = DateTime.Now.Year;
 
         [Parameter]
@@ -107,11 +107,14 @@
             _openRight = false;
         }
 
-        public void SetBackground(string url,string footNote,string cssClass)
+        public void SetBackground(string url, string footNote, string cssClass)
         {
-            FootNote = footNote;
-            BackgroundClass = cssClass;
-            BackgroundImageUrl = url;
+            if (footNote != null)
+                FootNote = footNote;
+            if (cssClass != null)
+                BackgroundClass = cssClass;
+            if (url != null)
+                BackgroundImageUrl = url;
             StateHasChanged();
         }
     }

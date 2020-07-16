@@ -1,9 +1,9 @@
 ﻿@code {
     [Parameter]
-    public string Url { get; set; }
+    public string Url { get; set; } = null;
 
     [Parameter]
-    public string FootNote { get; set; }
+    public string FootNote { get; set; } = null;
 
     [Parameter]
     public string CssClass { get; set; } = "app-background-gradient";
@@ -11,12 +11,9 @@
     [CascadingParameter(Name = "CleanLayout")]
     public CleanLayout CleanLayout { get; set; }
 
-
-
-
     protected override void OnInitialized()
     {
-        CleanLayout.SetBackground(Url,FootNote,CssClass);
+        CleanLayout.SetBackground(Url, FootNote, CssClass);
         base.OnInitialized();
     }
 }
