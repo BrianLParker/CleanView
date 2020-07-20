@@ -9,12 +9,13 @@
 </div>
 
 @code {
-    System.Timers.Timer _timer;
+    static Random Random = new Random((int)DateTime.Now.Ticks);
+    System.Timers.Timer timer;
 
-    int _i = new Random().Next(0, 4);
-    int angle = new Random().Next(0, 360);
+    int targetCorner = Random.Next(0, 4);
+    int angle = Random.Next(0, 360);
 
-    string _class => _i switch
+    string _class => targetCorner switch
     {
         0 => "lb-pos1",
         1 => "lb-pos2",
@@ -24,9 +25,9 @@
 
     protected override void OnInitialized()
     {
-        _timer = new System.Timers.Timer();
-        _timer.AutoReset = false;
-        _timer.Elapsed += _timer_Elapsed;
+        timer = new System.Timers.Timer();
+        timer.AutoReset = false;
+        timer.Elapsed += timer_Elapsed;
         ResetTimer();
 
         base.OnInitialized();
@@ -34,26 +35,23 @@
 
     void ResetTimer()
     {
-        var r = new Random();
-        var duration = 5 + r.Next(0, 10);
+        var duration = Random.Next(5000, 15000);
 
-        _timer.Stop();
-        _timer.Interval = duration * 1000;
-
-        _timer.Start();
+        timer.Stop();
+        timer.Interval = duration;
+        timer.Start();
     }
 
 
-    private void _timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+    void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
     {
         InvokeAsync(() =>
         {
-            _i = (_i + 1) % 4;
+            targetCorner = Random.Next(0, 4);
             StateHasChanged();
 
         });
         ResetTimer();
-
     }
 
 }
