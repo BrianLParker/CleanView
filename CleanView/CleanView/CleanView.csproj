@@ -32,6 +32,7 @@ UserAccountDisplay is a drop in replacement for the identity templates LoginDisp
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 

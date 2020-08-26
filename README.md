@@ -52,7 +52,7 @@ Clean view is a wrapper for MainLayout for blazor project. As it has customizabl
 
 ### NavPanel's 
 - NavPanelMenuItems can contain NavPanelMenuItems allowing for nested menu structure.
-- NavPanelMenuItems can be treated like anchor <a /> elements. Attributes are splattered to the anchor. If css classes are used be aware they will override the default class applied.
+- NavPanelMenuItems can be treated like anchor elements. Attributes are splattered to the anchor. If css classes are used be aware they will override the default class applied.
 
 
 ```
