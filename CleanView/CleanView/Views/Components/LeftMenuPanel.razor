@@ -1,0 +1,9 @@
+﻿<button @onfocusout="OnFocusOut" @onclick="OnClickLeft" class="btn btn-outline text-white clean-view-text-shadow no-print fade-up-button @LeftButtonStateClass">
+    @LeftIcon
+</button>
+@if (open)
+{
+    <div class="clean-view-pop clean-view-left" @onmouseover="OnMouseOverPanel" @onmouseout="OnMouseOutPanel">
+        @Panel
+    </div>
+}

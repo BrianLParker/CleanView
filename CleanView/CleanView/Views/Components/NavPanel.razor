@@ -1,4 +1,6 @@
-﻿<div class="d-flex flex-column align-content-stretch m-0 p-0 overflow-hidden">
+﻿@namespace CleanView
+
+<div class="d-flex flex-column align-content-stretch m-0 p-0 overflow-hidden">
     @if (_panelOpen)
     {
         <div class="clean-view-panel-left">
@@ -18,26 +20,7 @@
     }
 </div>
 @code {
-
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
-
     [Parameter]
     public RenderFragment SubPanelFragment { get; set; } =@:@{ <div>Nothing to see here</div> }
     ;
-
-    public void SetContent(RenderFragment fragment)
-    {
-        SubPanelFragment = fragment;
-        Toggle();
-        StateHasChanged();
-    }
-
-    bool _panelOpen = false;
-
-    void Toggle()
-    {
-        _panelOpen = !_panelOpen;
-    }
-
 }
