@@ -70,3 +70,12 @@ Clean view is a wrapper for MainLayout for blazor project. As it has customizabl
 </NavPanel>
 
 ```
+
+### BackgroundSetter
+- Placing this item on a page will set the background image on initialization.
+
+```
+
+<BackgroundSetter Url="background.jpg" FootNote="Image by Luc Tribolet - unsplash.com" />
+
+```

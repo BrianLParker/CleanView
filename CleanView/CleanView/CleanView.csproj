@@ -8,7 +8,7 @@
     <Product>Clean View</Product>
     <Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
     <Copyright>Brian Parker</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression></PackageLicenseExpression>
     <PackageIcon>icon-64x64.png</PackageIcon>
     <RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,6 +16,10 @@
 CleanLayout, NavPanel, NavPanelMenuItem are the primary components. 
 UserAccountDisplay is a drop in replacement for the identity templates LoginDisplay in Webassembly projects.
 </PackageReleaseNotes>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.201.0</AssemblyVersion>
+    <FileVersion>1.0.201.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,15 +29,15 @@ UserAccountDisplay is a drop in replacement for the identity templates LoginDisp
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\Brian\Pictures\WebsiteIcons\icon-64x64.png">
+    <None Include="License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="Resources\icon-64x64.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\" />
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
+  
 </Project>

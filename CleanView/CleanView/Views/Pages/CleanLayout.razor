@@ -1,7 +1,10 @@
-﻿<CascadingValue Value="this" Name="CleanLayout">
+﻿@namespace CleanView
+
+<CascadingValue Value="this" Name="CleanLayout">
     <div class="clean-view-base @BackgroundClass">
         <div style="@_backgroundStyle" class="clean-view-base">
-            @for (int i = 0; i < ((_count > 0) ? _count : 0); i++) {<Larnie />}
+            @for (int i = 0; i < ((_count > 0) ? _count : 0); i++)
+            {<Larnie />}
             <header class="clean-view-top">
                 <div class="clean-view-icons">
                     <button class="btn btn-outline text-white clean-view-text-shadow no-print fade-up-button @_leftButtonStateClass" @onfocusout="OnFocusOut" @onclick="OnClickLeft">

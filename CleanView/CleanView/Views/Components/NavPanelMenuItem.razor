@@ -1,4 +1,6 @@
-﻿<div class="d-flex flex-row p-1">
+﻿@namespace CleanView
+
+<div class="d-flex flex-row p-1">
     <a @attributes="InputAttributes" class="btn btn-sm btn-block d-flex flex-row text-left clean-view-pointer hover-lift">
         <div class="mr-3 nav-panel-icon">
             <span class="oi @Icon" aria-hidden="true"></span>
@@ -14,26 +16,3 @@
         </button>
     }
 </div>
-@code {
-
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> InputAttributes { get; set; }
-
-    [Parameter]
-    public string Name { get; set; }
-
-    [Parameter]
-    public string Icon { get; set; }
-
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
-
-    [CascadingParameter]
-    public NavPanel ParentPanel { get; set; }
-
-    void SetParent()
-    {
-        ParentPanel?.SetContent(ChildContent);
-    }
-
-}
