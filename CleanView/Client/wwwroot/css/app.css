@@ -205,7 +205,6 @@ app {
 
 #cv-body {
     height: calc(100vh - 200px);
-    border: black dashed 2px;
     display: flex;
     flex-direction: column;
 }

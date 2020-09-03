@@ -1,0 +1,9 @@
+﻿@namespace CleanView
+
+<div id="cv-body" class="bg-light">
+    @ChildContent
+</div>
+@code{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
