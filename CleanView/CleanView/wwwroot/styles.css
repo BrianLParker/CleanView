@@ -504,3 +504,14 @@ body html {
     background: linear-gradient(45deg, #3c36f0 0%,#249bc0 100%,#249bc0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c36f0', endColorstr='#249bc0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+#cv-body {
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+}
+
+#cv-content {
+    overflow-y: auto;
+}
+
