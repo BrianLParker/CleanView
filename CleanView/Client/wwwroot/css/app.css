@@ -203,13 +203,3 @@ app {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c02425', endColorstr='#f0cb35',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-#cv-body {
-    height: calc(100vh - 200px);
-    display: flex;
-    flex-direction: column;
-}
-
-#cv-content {
-    overflow-y: auto ;
-}
-
