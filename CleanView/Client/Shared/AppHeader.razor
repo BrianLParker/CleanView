@@ -2,17 +2,13 @@
 @inject SignOutSessionStateManager SignOutManager
     <div class="text-white flex-grow-1 mx-2 p-1 row">
         <div class="col-sm">
-            <h4 class="clean-view-text-shadow no-select">Clean View Demonstration</h4>
+            <h4 class="clean-view-text-shadow no-select">Clean View</h4>
             <AuthorizeView>
                 <Authorizing>
                     <em style="font-size:0.6em">Authenticating...</em>
                 </Authorizing>
             </AuthorizeView>
         </div>
-        @*<h2 class="clean-view-text-shadow no-select col-sm text-center">
-            Title
-        </h2>*@
-
         <div class="col-sm  text-right">
             <AuthorizeView>
                 <Authorizing>
@@ -37,12 +33,14 @@
     {
         get
         {
-
             var hour = DateTime.Now.Hour;
-            if (hour > 18) return "Good evening";
-            if (hour > 12) return "Good afternoon";
-            if (hour > 10) return "Hello";
-            return "Good morning";
+            return hour switch
+            {
+                _ when (hour > 18) => "Good evening",
+                _ when (hour > 12) => "Good afternoon",
+                _ when (hour > 10) => "Hello",
+                _ => "Good morning"
+            };
         }
     }
 
@@ -51,7 +49,6 @@
     {
         var namepart = email.Split('@').FirstOrDefault() ?? string.Empty;
         return namepart.Replace(".", " ");
-
     }
 
 }

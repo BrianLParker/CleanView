@@ -1,43 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <RazorLangVersion>3.0</RazorLangVersion>
-    <Version>1.0.201</Version>
-    <Authors>Brian Parker</Authors>
-    <Product>Clean View</Product>
-    <Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
-    <Copyright>Brian Parker</Copyright>
-    <PackageLicenseExpression></PackageLicenseExpression>
-    <PackageIcon>icon-64x64.png</PackageIcon>
-    <RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Please see GitHub repo for example of use in Client.
-CleanLayout, NavPanel, NavPanelMenuItem are the primary components. 
-UserAccountDisplay is a drop in replacement for the identity templates LoginDisplay in Webassembly projects.
-</PackageReleaseNotes>
-    <PackageLicenseFile>License.txt</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.0.201.0</AssemblyVersion>
-    <FileVersion>1.0.201.0</FileVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<RazorLangVersion>3.0</RazorLangVersion>
+		<Version>1.0.201</Version>
+		<Authors>Brian Parker</Authors>
+		<Product>Clean View</Product>
+		<Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
+		<Copyright>Brian Parker</Copyright>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageIcon>icon-64x64.png</PackageIcon>
+		<RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReleaseNotes>
+			Please see GitHub repo for example of use in Client.
+			CleanLayout, NavPanel, NavPanelMenuItem are the primary components.
+			UserAccountDisplay is a drop in replacement for the identity templates LoginDisplay in Webassembly projects.
+		</PackageReleaseNotes>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<AssemblyVersion>1.0.201.0</AssemblyVersion>
+		<FileVersion>1.0.201.0</FileVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.7" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.7" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="3.2.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="3.2.1" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Include="License.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="Resources\icon-64x64.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="License.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="Resources\icon-64x64.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
 
-  
 </Project>
