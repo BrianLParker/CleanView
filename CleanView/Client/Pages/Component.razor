@@ -1,0 +1,31 @@
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(Program).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData">
+                <Authorizing>
+                    <p>Authorizing...</p>
+                </Authorizing>
+                <NotAuthorized>
+                    <AuthorizeView Context="authenticated">
+                        <Authorized Context="authenticated">
+                            <AuthorizeView Roles="WhatEver" Context="role">
+                                <Authorized Context="role">
+                                    <NotAuthorizedView />
+                                </Authorized>
+                                <NotAuthorized Context="role">
+                                    <ForbiddenView />
+                                </NotAuthorized>
+                            </AuthorizeView>
+                        </Authorized>
+                        <NotAuthorized Context="authenticated">
+                            <RedirectToLogin />
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </NotAuthorized>
+            </AuthorizeRouteView>
+        </Found>
+        <NotFound>
+            <NotFoundView />
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
