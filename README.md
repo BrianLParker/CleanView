@@ -1,6 +1,9 @@
 # CleanView
 Clean view is a wrapper for MainLayout for blazor project. As it has customizable components, a wrapper allows easier definition than a replacing MainLayout.
 
+
+![alt text](https://user-images.githubusercontent.com/8317299/95468150-f21d1200-09c9-11eb-8d77-3bb0239212c9.png)
+
 ## You need to:
 1. Import the styles from "_content/CleanView/styles.css"
 2. Add a using statement to _Imports.razor
