@@ -11,8 +11,9 @@
 namespace CleanView.Views.Components
 {
     using System;
+    using Microsoft.AspNetCore.Components;
 
-    public partial class Larnie
+    public partial class Larnie : ComponentBase
     {
         protected override void OnInitialized()
         {

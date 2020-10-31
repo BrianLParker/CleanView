@@ -271,18 +271,15 @@ body html {
         transition: all 0.26s ease-in-out;
     }
 
-
     .clean-view-top {
         padding: 40px 80px;
-        transform: scaleY(1);
-        /*  transform-origin: top;
-        transition: transform 0.26s ease;*/
         transition: all 0.26s ease-in-out;
     }
 
     .clean-view-content-size {
-        padding: 40px 80px;
-        margin: 0px 80px 40px 80px;
+        margin: 0px 80px;
+        padding: 15px 40px;
+        transition: all 0.26s ease-in-out;
     }
 
     .clean-view-content {
@@ -309,9 +306,9 @@ body html {
     transition: max-height 0.25s ease-in;
 }
 
-.clean-view-footer {
-    display:flex;
-    flex-flow:row ;
+.clean-view-footer {    
+    display: flex;
+    flex-flow: row;
     justify-content: space-between;
     background-color: rgba(0,0,0,0.4);
     color: white;
@@ -367,7 +364,6 @@ body html {
     transition: all 0.5s ease-in-out;
 }
 
-
 .fade-in-1 {
     animation: fadeIn ease 1s;
     -webkit-animation: fadeIn ease 1s;
@@ -383,7 +379,6 @@ body html {
     -o-animation: fadeIn ease 0.3s;
     -ms-animation: fadeIn ease 0.3s;
 }
-
 
 .fade-out-delay {
     opacity: 0;
@@ -444,7 +439,6 @@ body html {
         opacity: 1;
     }
 }
-
 
 @keyframes fadeOut {
     0% {
@@ -507,7 +501,7 @@ body html {
 
 #cv-body {
     height: calc(100vh - 200px);
-    display: flex;
+   display: flex;
     flex-direction: column;
 }
 
