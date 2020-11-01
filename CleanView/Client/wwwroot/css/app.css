@@ -44,10 +44,10 @@ app {
             margin-left: 1.5rem;
         }
 
-.main .top-row a:first-child {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+        .main .top-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
@@ -132,12 +132,12 @@ app {
     z-index: 1000;
 }
 
-#blazor-error-ui .dismiss {
-    cursor: pointer;
-    position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
-}
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
 
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
@@ -203,3 +203,16 @@ app {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c02425', endColorstr='#f0cb35',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+@media (max-width: 767.98px) {
+    .clean-view-top {
+        background-color: rgba( 4, 47, 85, 1);
+        transition: background-color ease-in 0.3s;
+    }
+}
+
+@media (min-width: 768px) {
+    .clean-view-top {
+        background-color: rgba( 4, 47, 85, 0);       
+    }
+
+}
