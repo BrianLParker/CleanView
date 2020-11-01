@@ -1,13 +1,15 @@
 ﻿@namespace CleanView
-
 @using System.Reflection
 @clientVersion
 @code {
     string clientVersion;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        clientVersion = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
-        await base.OnInitializedAsync();
+        clientVersion = Assembly.GetExecutingAssembly()
+            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+            .InformationalVersion;
+
+        base.OnInitialized();
     }
 }
