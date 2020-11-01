@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<RazorLangVersion>3.0</RazorLangVersion>
-		<Version>1.0.216</Version>
+		<Version>1.0.3</Version>
 		<Authors>Brian Parker</Authors>
 		<Product>Clean View</Product>
 		<Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
@@ -12,11 +12,7 @@
 		<PackageIcon>icon-64x64.png</PackageIcon>
 		<RepositoryUrl>https://github.com/BrianLParker/CleanView</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageReleaseNotes>
-			Please see GitHub repo for example of use in Client.
-			CleanLayout, NavPanel, NavPanelMenuItem are the primary components.
-			UserAccountDisplay is a drop in replacement for the identity templates LoginDisplay in Webassembly projects.
-		</PackageReleaseNotes>
+		<PackageReleaseNotes>CleanViewVersion component. Renders assembly version.</PackageReleaseNotes>
 		<PackageLicenseFile>License.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<AssemblyVersion>1.0.201.0</AssemblyVersion>
