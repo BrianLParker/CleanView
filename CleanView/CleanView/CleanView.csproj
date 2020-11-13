@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<RazorLangVersion>3.0</RazorLangVersion>
-		<Version>1.0.300</Version>
+		<Version>1.1.0-dev0001</Version>
 		<Authors>Brian Parker</Authors>
 		<Product>Clean View</Product>
 		<Description>Clean view is a wrapper for MainLayout for blazor projects.</Description>
@@ -15,15 +16,28 @@
 		<PackageReleaseNotes>CleanViewVersion component. Renders assembly version.</PackageReleaseNotes>
 		<PackageLicenseFile>License.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<AssemblyVersion>1.0.201.0</AssemblyVersion>
-		<FileVersion>1.0.201.0</FileVersion>
+		<AssemblyVersion>1.1.0</AssemblyVersion>
+		<FileVersion>1.1.0</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.9" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.9" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="3.2.1" />
+		<PackageReference Include="MSBump" Version="2.3.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
+
+	<PropertyGroup Condition="$(Configuration) == 'Debug'">
+		<BumpLabel>dev</BumpLabel>
+		<BumpLabelDigits>4</BumpLabelDigits>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration) == 'Release'">
+		<BumpRevision>True</BumpRevision>
+		<BumpResetLabel>dev</BumpResetLabel>
+	</PropertyGroup>
 	
 	<ItemGroup>
 		<None Include="License.txt">
