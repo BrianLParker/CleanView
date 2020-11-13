@@ -59,8 +59,8 @@
     text-shadow: 3px 3px 3px rgba(0,0,0,0.2);
 }
 
-.hover-lift:hover {
-        text-shadow: none;  
+    .hover-lift:hover {
+        text-shadow: none;
         box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
         border: 1px solid rgba(0,0,127,0.1);
         border-radius: 3px;
@@ -306,7 +306,7 @@ body html {
     transition: max-height 0.25s ease-in;
 }
 
-.clean-view-footer {    
+.clean-view-footer {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -315,9 +315,11 @@ body html {
     font-size: 0.75em;
     padding: 0 2px;
 }
+
 .clean-view-foot-note {
     color: rgba(255,255,255,0.3);
 }
+
 .clean-view-pointer {
     cursor: pointer;
 }
@@ -499,13 +501,27 @@ body html {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c36f0', endColorstr='#249bc0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-#cv-body {
-    height: calc(100vh - 200px);
-   display: flex;
-    flex-direction: column;
+@media (max-width: 767.98px) {
+    #cv-body {
+        height: calc(100vh - 170px);
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #cv-body {
+        height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 #cv-content {
+    overflow-y: hidden;
+}
+#cv-content:hover {
     overflow-y: auto;
 }
-
